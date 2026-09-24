@@ -1,0 +1,730 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SafeFile</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Cimastream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":app/prereleaseDebug">JVM</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/prereleaseDebug" data-filter=":app/prereleaseDebug">
+                                <span class="checkbox--icon"></span>
+                                JVM
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Cimastream
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.mehdigm.safefile/SafeFile///PointingToDeclaration//-1280901913">
+  <div class="breadcrumbs"><a href="../../index.html">App</a><span class="delimiter">/</span><a href="../index.html">com.mehdigm.safefile</a><span class="delimiter">/</span><span class="current">SafeFile</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Safe</span><wbr><span><span>File</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">SafeFile</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/mehdigm4life/cimastream/tree/master/app/src/main/java/com/mehdigm/safefile/SafeFile.kt#L36">source</a>)</span></span></div><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-media-file/index.html">MediaFile</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-uni-file-wrapper/index.html">UniFileWrapper</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1247847708%2FClasslikes%2F-1280901913" anchor-label="Companion" id="-1247847708%2FClasslikes%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1247847708%2FClasslikes%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="874233559%2FFunctions%2F-1280901913" anchor-label="canRead" id="874233559%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="can-read.html"><span>can</span><wbr><span><span>Read</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="874233559%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="can-read.html"><span class="token function">canRead</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Indicates whether the current context is allowed to read from this file.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-761729504%2FFunctions%2F-1280901913" anchor-label="canReadOrThrow" id="-761729504%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="can-read-or-throw.html"><span>can</span><wbr><span>Read</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-761729504%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="can-read-or-throw.html"><span class="token function">canReadOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the current context is allowed to read from this file.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-891555122%2FFunctions%2F-1280901913" anchor-label="canWrite" id="-891555122%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="can-write.html"><span>can</span><wbr><span><span>Write</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-891555122%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="can-write.html"><span class="token function">canWrite</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Indicates whether the current context is allowed to write to this file.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="973841993%2FFunctions%2F-1280901913" anchor-label="canWriteOrThrow" id="973841993%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="can-write-or-throw.html"><span>can</span><wbr><span>Write</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="973841993%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="can-write-or-throw.html"><span class="token function">canWriteOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the current context is allowed to write to this file.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-234430645%2FFunctions%2F-1280901913" anchor-label="createDirectory" id="-234430645%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-directory.html"><span>create</span><wbr><span><span>Directory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-234430645%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="create-directory.html"><span class="token function">createDirectory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">directoryName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Create a new directory as a direct child of this directory. Returns null if failed</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="822396042%2FFunctions%2F-1280901913" anchor-label="createDirectoryOrThrow" id="822396042%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-directory-or-throw.html"><span>create</span><wbr><span>Directory</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="822396042%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-directory-or-throw.html"><span class="token function">createDirectoryOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">directoryName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a></div><div class="brief "><p class="paragraph">Create a new directory as a direct child of this directory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-695012892%2FFunctions%2F-1280901913" anchor-label="createFile" id="-695012892%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-file.html"><span>create</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-695012892%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="create-file.html"><span class="token function">createFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Create a new file as a direct child of this directory. Returns null if failed</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1102332881%2FFunctions%2F-1280901913" anchor-label="createFileOrThrow" id="1102332881%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-file-or-throw.html"><span>create</span><wbr><span>File</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1102332881%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-file-or-throw.html"><span class="token function">createFileOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a></div><div class="brief "><p class="paragraph">Create a new file as a direct child of this directory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="675097234%2FFunctions%2F-1280901913" anchor-label="delete" id="675097234%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete.html"><span><span>delete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675097234%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="delete.html"><span class="token function">delete</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Deletes this file/directory. returns true if successful</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="647293445%2FFunctions%2F-1280901913" anchor-label="deleteOrThrow" id="647293445%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-or-throw.html"><span>delete</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="647293445%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="delete-or-throw.html"><span class="token function">deleteOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Deletes this file/directory. returns true if successful</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="324531457%2FFunctions%2F-1280901913" anchor-label="exists" id="324531457%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exists.html"><span><span>exists</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="324531457%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="exists.html"><span class="token function">exists</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns a boolean indicating whether this file can be found. returns null if some sort of error happened, can be treated as false</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="574969014%2FFunctions%2F-1280901913" anchor-label="existsOrThrow" id="574969014%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exists-or-throw.html"><span>exists</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="574969014%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exists-or-throw.html"><span class="token function">existsOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns a boolean indicating whether this file can be found. throws if some sort of error happened, can be treated as false</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1743543612%2FFunctions%2F-1280901913" anchor-label="filePath" id="1743543612%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file-path.html"><span>file</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1743543612%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="file-path.html"><span class="token function">filePath</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns the file as a readable file path</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1437514725%2FFunctions%2F-1280901913" anchor-label="filePathOrThrow" id="-1437514725%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file-path-or-throw.html"><span>file</span><wbr><span>Path</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437514725%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="file-path-or-throw.html"><span class="token function">filePathOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">returns the file as a readable file path</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-352152675%2FFunctions%2F-1280901913" anchor-label="findFile" id="-352152675%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-file.html"><span>find</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-352152675%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="find-file.html"><span class="token function">findFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">ignoreCase<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns the file with the display name in the directory</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1751303798%2FFunctions%2F-1280901913" anchor-label="findFileOrThrow" id="1751303798%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-file-or-throw.html"><span>find</span><wbr><span>File</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1751303798%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="find-file-or-throw.html"><span class="token function">findFileOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">ignoreCase<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a></div><div class="brief "><p class="paragraph">returns the file with the display name in the directory</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-906589294%2FFunctions%2F-1280901913" anchor-label="gotoDirectory" id="-906589294%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-directory.html"><span>goto</span><wbr><span><span>Directory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-906589294%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="goto-directory.html"><span class="token function">gotoDirectory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">directoryName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">createMissingDirectories<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SafeFile</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">file.gotoDirectory("a/b/c") -&gt; "file/a/b/c/" where a null or blank directoryName returns itself. createMissingDirectories specifies if the dirs should be created when travelling or break at a dir not found</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-235252070%2FFunctions%2F-1280901913" anchor-label="isDirectory" id="-235252070%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-directory.html"><span>is</span><wbr><span><span>Directory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-235252070%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-directory.html"><span class="token function">isDirectory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns true if the current SafeFile is a directory, because of file security this may return null</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1358406909%2FFunctions%2F-1280901913" anchor-label="isDirectoryOrThrow" id="1358406909%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-directory-or-throw.html"><span>is</span><wbr><span>Directory</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1358406909%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="is-directory-or-throw.html"><span class="token function">isDirectoryOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">returns true if the current SafeFile is a directory, because of file security this may throw</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1897538263%2FFunctions%2F-1280901913" anchor-label="isFile" id="1897538263%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-file.html"><span>is</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1897538263%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-file.html"><span class="token function">isFile</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns true if the current SafeFile is a file, because of file security this may return null</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1855845856%2FFunctions%2F-1280901913" anchor-label="isFileOrThrow" id="-1855845856%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-file-or-throw.html"><span>is</span><wbr><span>File</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855845856%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="is-file-or-throw.html"><span class="token function">isFileOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">returns true if the current SafeFile is a file, because of file security this may throw</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-380499138%2FFunctions%2F-1280901913" anchor-label="lastModified" id="-380499138%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-modified.html"><span>last</span><wbr><span><span>Modified</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-380499138%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="last-modified.html"><span class="token function">lastModified</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1718734887%2FFunctions%2F-1280901913" anchor-label="lastModifiedOrThrow" id="-1718734887%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-modified-or-throw.html"><span>last</span><wbr><span>Modified</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1718734887%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="last-modified-or-throw.html"><span class="token function">lastModifiedOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="156319159%2FFunctions%2F-1280901913" anchor-label="length" id="156319159%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="length.html"><span><span>length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="156319159%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="length.html"><span class="token function">length</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns the file length in bytes, will return null if error or file not found</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1625355072%2FFunctions%2F-1280901913" anchor-label="lengthOrThrow" id="1625355072%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="length-or-throw.html"><span>length</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1625355072%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="length-or-throw.html"><span class="token function">lengthOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">returns the file length in bytes, will throw if error or file not found</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1710458692%2FFunctions%2F-1280901913" anchor-label="listFiles" id="1710458692%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="list-files.html"><span>list</span><wbr><span><span>Files</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1710458692%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="list-files.html"><span class="token function">listFiles</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="index.html">SafeFile</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">lists all files in the directory, returns null if error or if not a directory</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1456488723%2FFunctions%2F-1280901913" anchor-label="listFilesOrThrow" id="1456488723%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="list-files-or-throw.html"><span>list</span><wbr><span>Files</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456488723%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="list-files-or-throw.html"><span class="token function">listFilesOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="index.html">SafeFile</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">lists all files in the directory, throws if error or if not a directory</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="819362226%2FFunctions%2F-1280901913" anchor-label="name" id="819362226%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="819362226%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="name.html"><span class="token function">name</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns the display name of this file, returns null if failed or is a directory</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1759139557%2FFunctions%2F-1280901913" anchor-label="nameOrThrow" id="1759139557%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name-or-throw.html"><span>name</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759139557%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="name-or-throw.html"><span class="token function">nameOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">returns the display name of this file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="632956509%2FFunctions%2F-1280901913" anchor-label="openInputStream" id="632956509%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-input-stream.html"><span>open</span><wbr><span>Input</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="632956509%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="open-input-stream.html"><span class="token function">openInputStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html">InputStream</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Open a stream on to the content associated with the file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1814438874%2FFunctions%2F-1280901913" anchor-label="openInputStreamOrThrow" id="1814438874%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-input-stream-or-throw.html"><span>open</span><wbr><span>Input</span><wbr><span>Stream</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1814438874%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="open-input-stream-or-throw.html"><span class="token function">openInputStreamOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html">InputStream</a></div><div class="brief "><p class="paragraph">Open a stream on to the content associated with the file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1675933513%2FFunctions%2F-1280901913" anchor-label="openOutputStream" id="-1675933513%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-output-stream.html"><span>open</span><wbr><span>Output</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1675933513%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="open-output-stream.html"><span class="token function">openOutputStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">append<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/OutputStream.html">OutputStream</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-396731862%2FFunctions%2F-1280901913" anchor-label="openOutputStreamOrThrow" id="-396731862%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-output-stream-or-throw.html"><span>open</span><wbr><span>Output</span><wbr><span>Stream</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-396731862%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="open-output-stream-or-throw.html"><span class="token function">openOutputStreamOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">append<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/OutputStream.html">OutputStream</a></div><div class="brief "><p class="paragraph">Open a stream on to the content associated with the file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="320320771%2FFunctions%2F-1280901913" anchor-label="renameTo" id="320320771%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rename-to.html"><span>rename</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="320320771%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="rename-to.html"><span class="token function">renameTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Renames this file to displayName. returns true if successful</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1037922350%2FFunctions%2F-1280901913" anchor-label="renameToOrThrow" id="-1037922350%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rename-to-or-throw.html"><span>rename</span><wbr><span>To</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1037922350%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="rename-to-or-throw.html"><span class="token function">renameToOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Renames this file to displayName. returns true if successful</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1749137379%2FFunctions%2F-1280901913" anchor-label="type" id="1749137379%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="type.html"><span><span>type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749137379%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="type.html"><span class="token function">type</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2114383764%2FFunctions%2F-1280901913" anchor-label="typeOrThrow" id="2114383764%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="type-or-throw.html"><span>type</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2114383764%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="type-or-throw.html"><span class="token function">typeOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-117350991%2FFunctions%2F-1280901913" anchor-label="uri" id="-117350991%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="uri.html"><span><span>uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-117350991%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="uri.html"><span class="token function">uri</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="android.net/Uri///PointingToDeclaration/">Uri</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">returns the uri of the file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="562415110%2FFunctions%2F-1280901913" anchor-label="uriOrThrow" id="562415110%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="uri-or-throw.html"><span>uri</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="562415110%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="uri-or-throw.html"><span class="token function">uriOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="android.net/Uri///PointingToDeclaration/">Uri</span></div><div class="brief "><p class="paragraph">returns the uri of the file</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
